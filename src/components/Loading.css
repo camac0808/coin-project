@@ -1,0 +1,68 @@
+.loading {
+  font-family: "Handjet", monospace;
+}
+
+.loading h2 {
+  color: #00eeff;
+  text-shadow: 0 0 4px rgba(35, 34, 34, 0.4);
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.loading .progress-bar {
+  width: 20rem;
+  height: 2rem;
+  background-color: #54a399;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+  box-shadow: 3px 3px #13554b;
+}
+
+.loading .progress-bar::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #00eeff;
+  border-radius: 4px;
+  animation: loading 2s linear;
+}
+
+@keyframes loading {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.loading p {
+  position: absolute;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: #c6f4f2;
+  visibility: hidden;
+}
+
+@keyframes showContent {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
+  }
+}
+
+.loading .content-1 {
+  animation: showContent 0.75s forwards; /* content-1은 0.5초 후에 보이게 설정 */
+}
+
+.loading .content-2 {
+  animation: showContent 0.75s 0.75s forwards; /* content-2는 1초 후에 보이게 설정 */
+}
+
+.loading .content-3 {
+  animation: showContent 0.75s 1.5s forwards; /* content-3은 1.5초 후에 보이게 설정 */
+}
