@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Handjet:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Handjet:wght@400;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -6,11 +6,11 @@
 
 body {
   margin: 0;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: radial-gradient(#186a5e, #053339);
-  color: #e1eeeb;
+  background: #efefef;
+  color: #1c1e21;
   min-height: 100vh;
 }
 
@@ -18,44 +18,38 @@ body {
   max-width: 60rem;
   margin: 2rem auto;
   padding: 2rem;
-  background: radial-gradient(#0b201d, #021619);
   border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 h1 {
-  font-family: 'Handjet', monospace;
+  font-family: "Handjet", monospace;
   text-align: center;
   text-transform: uppercase;
-  color: #c1e2dd;
-  text-shadow: 0 0 4px rgba(35, 34, 34, 0.4);
-  font-size: 3.5rem;
+  color: #1c1e21;
+  font-size: 5rem;
   margin: 0;
 }
 
 h1 em {
   font-style: normal;
-  color: #00eeff;
+  color: rgb(255, 166, 0);
 }
 
 p em {
   font-style: normal;
-  color: gold;
+  color: rgb(255, 166, 0);
 }
 
 header p {
   font-size: 1.2rem;
+  font-weight: 500;
   margin: 0;
   text-align: center;
-  color: #c6f4f2;
+  color: #1c1e21;
 }
 
 #player {
   text-align: center;
-}
-
-#player h2 {
-  color: #54a399;
 }
 
 #player p {
@@ -66,8 +60,8 @@ header p {
 
 #player input {
   font: inherit;
-  border: 1px solid #54a399;
-  background-color: #192f2b;
+  border: 1px solid #1c1e21;
+  background-color: transparent;
   border-radius: 4px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
@@ -77,10 +71,10 @@ header p {
 
 #player button {
   cursor: pointer;
-  background-color: #54a399;
-  border: 1px solid #54a399;
+  background-color: #1c1e21;
+  border: 1px solid #1c1e21;
   padding: 0.4rem 1rem;
-  color: #061e1a;
+  color: #efefef;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
 }
@@ -163,7 +157,7 @@ header p {
 }
 
 .result-modal h2 {
-  font-family: 'Handjet', monospace;
+  font-family: "Handjet", monospace;
   margin: 0 0 0.25rem 0;
   font-size: 3rem;
   text-transform: uppercase;
