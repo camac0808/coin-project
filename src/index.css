@@ -6,10 +6,10 @@
 
 body {
   margin: 0;
-  font-family: "Quicksand", sans-serif;
+  font-family: 'Quicksand', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #efefef;
+  background: radial-gradient(#186a5e, #053339);
   color: #1c1e21;
   min-height: 100vh;
 }
@@ -30,12 +30,7 @@ h1 {
   margin: 0;
 }
 
-h1 em {
-  font-style: normal;
-  color: rgb(255, 166, 0);
-}
-
-p em {
+em {
   font-style: normal;
   color: rgb(255, 166, 0);
 }
@@ -52,7 +47,17 @@ header p {
   text-align: center;
 }
 
+#player h2 {
+  margin: 3rem 0 1rem 0;
+}
+
 #player p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#player form {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,6 +72,7 @@ header p {
   border-bottom-right-radius: 0;
   padding: 0.25rem;
   color: #d1f0ec;
+  outline: none;
 }
 
 #player button {
