@@ -1,30 +1,40 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 import Loading from "./components/Loading.jsx";
-import Player from './components/Player.jsx';
-import TimerSection from './components/TimerSection.jsx';
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
+import Home from "./components/Home.jsx";
+import ErrorBoundary from "./components/ErrorBoundary.jsx";
+import LoginPage from "./components/LoginPage.jsx";
+import Layout from "./components/Layout.jsx";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
+  const init = async () => {
     setTimeout(() => {
       setIsLoading(false);
     }, 2000);
+  };
+
+  // Layout 내부에 Outlet을 넣어주면, 해당 라우터의 하위 라우터들이 렌더링된다.
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<Layout />} errorElement={<ErrorBoundary />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<LoginPage />} />
+      </Route>
+    )
+  );
+
+  useEffect(() => {
+    init();
   }, []);
 
-  if (isLoading) {
-    return <Loading />;
-  }
-
-  return (
-    <>
-      <Player />
-      <TimerSection title="easy" timer={1} />
-      <TimerSection title="normal" timer={5} />
-      <TimerSection title="hard" timer={10} />
-      <TimerSection title="pro" timer={15} />
-    </>
-  );
+  return <>{isLoading ? <Loading /> : <RouterProvider router={router} />}</>;
 }
 
 export default App;
